@@ -1,3 +1,4 @@
+// campaign.model.ts
 export interface Campaign {
   id: number;
   category: Array<string>;

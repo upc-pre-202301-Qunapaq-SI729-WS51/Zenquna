@@ -1,3 +1,4 @@
+//news.model.ts
 export interface News {
   id: number;
   campaignId: number;
