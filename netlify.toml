@@ -3,9 +3,16 @@
   publish = "dist/zenquna"
 
 [dev]
-  command = "ng serve --open"
+  command = "ng serve"
+  port = 4200
+    publish = "dist/zenquna"
 
 [[redirects]]
   from = "/api/*"
-  to = "http://localhost:3000/:splat"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
