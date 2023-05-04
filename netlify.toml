@@ -1,5 +1,5 @@
 [build]
-  command = "ng build --configuration production && npm run json-server"
+  command = "ng build --configuration production"
   publish = "dist/zenquna"
 
 [dev]
@@ -9,5 +9,5 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
+  to = "http://localhost:3000/:splat"
   status = 200
