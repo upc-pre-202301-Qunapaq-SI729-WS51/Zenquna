@@ -1,7 +1,13 @@
 [build]
-  command = "npm run build"
+  command = "ng build --configuration production && npm run json-server"
   publish = "dist/zenquna"
 
 [dev]
-  command = "npm run json-server & ng serve"
-  publish = "dist/zenquna"
+  command = "ng serve"
+  port = 4200
+    publish = "dist/zenquna"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
