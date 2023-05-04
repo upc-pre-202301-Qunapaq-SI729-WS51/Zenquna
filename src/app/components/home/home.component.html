@@ -1,0 +1,31 @@
+<div class="main-container">
+  <div class="content-container">
+    <div class="trend-container">
+      <h2>Tendencia</h2>
+      <p>Carrousel Work in progress</p>
+    </div>
+    <div class="explore-container">
+      <h2>Más campañas</h2>
+      <div class="campaign-card-container">
+        <mat-card class="campaign-card" *ngFor="let campaign of campaigns">
+          <img
+            mat-card-image
+            [src]="campaign.imageMini"
+            [alt]="campaign.name"
+          />
+          <mat-card-content>
+            <h3 mat-card-title>{{ campaign.name }}</h3>
+            <p mat-card-subtitle>{{ campaign.summary }}</p>
+            <button
+              mat-raised-button
+              color="accent"
+              routerLink="/campaign/{{ campaign.id }}"
+            >
+              Ver ahora
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
